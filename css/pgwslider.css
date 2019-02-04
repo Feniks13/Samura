@@ -1,0 +1,86 @@
+/**
+ * PgwSlider - Version 2.3
+ *
+ * Copyright 2014, Jonathan M. Piat
+ * http://pgwjs.com - http://pagawa.com
+ *
+ * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
+ */
+.pgwSlider .ps-current {
+    float: left;
+    width: 457px;
+    overflow: hidden;
+    height: 270px;
+    position: relative;
+}
+.pgwSlider.listOnTheLeft .ps-current {
+    float: right;
+}
+.pgwSlider .ps-current ul {
+    width: 100%;
+}
+.pgwSlider .ps-current li {
+    width: 100%;
+    z-index: 1;
+    display: none;
+}
+.pgwSlider .ps-current img {
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+    display: block;
+}
+ul.pgwSlider,
+.pgwSlider  ul {
+    float: right;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+ul.pgwSlider.listOnTheLeft,
+.pgwSlider.listOnTheLeft > ul {
+    float: left;
+}
+ul.pgwSlider > li,
+.pgwSlider > .ps-list > li {
+    height: 39px;
+    margin-bottom: 17px;
+    overflow: hidden;
+    position: relative;
+}
+ul.pgwSlider > li:last-child,
+.pgwSlider > ul > li:last-child {
+    margin-bottom: 0;
+}
+ul.pgwSlider > li span,
+.pgwSlider > .ps-list > li span {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ul.pgwSlider > li img,
+.pgwSlider > ul > li img {
+    width: 66px;
+	min-height: 38px;
+    display: block;
+    transition: margin-top 250ms linear;
+}
+/*
+ * The media-queries are not used because IE8 doesn't support them.
+ */
+ul.pgwSlider.wide > li,
+.pgwSlider.wide > ul > li {
+    width: 100% !important;
+}
+.pgwSlider.narrow .ps-current,
+ul.pgwSlider.narrow,
+.pgwSlider.narrow > ul {
+    width: 100%;
+}
